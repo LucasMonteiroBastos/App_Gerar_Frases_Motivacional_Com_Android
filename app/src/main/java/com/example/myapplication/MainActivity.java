@@ -2,21 +2,16 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Button;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.myapplication.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,5 +28,18 @@ public class MainActivity extends AppCompatActivity {
         frases = findViewById(R.id.frases);
 
         gerarFrase = findViewById(R.id.gerarFrases);
+
+        gerarFrase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] fraseMotivacionais = {"aaaa", "bbb", "ccc"};
+
+
+                Random random = new Random();
+                int numeroRandom = random.nextInt(fraseMotivacionais.length);
+
+                frases.setText(fraseMotivacionais[numeroRandom]);
+            }
+        });
     }
 }
