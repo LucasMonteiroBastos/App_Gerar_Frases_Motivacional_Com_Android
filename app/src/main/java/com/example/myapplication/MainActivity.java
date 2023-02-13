@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         gerarFrase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String[] fraseMotivacionais = {"aaaaa", "bbbbb", "ccccc"};
+                String[] fraseMotivacionais = {"aaaaa", "bbbbb", "cccccc"};
 
 
                 Random random = new Random();
